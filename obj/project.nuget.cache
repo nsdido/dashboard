@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sS3600hBS+zYCrfAgni7eqR6GrtGpejqNLy3eOZcafOcWyfJ+kpKqqePEZQmztSs3NkE2RFqZNQdT40oDRbPdQ==",
+  "dgSpecHash": "1BVLpGOJwYvZf0WWEH70zO16zJleODmm5gDGxp1Jv2tO692yaJy1Ouc9/XStBuwE/p01VBWtjJ2HZmT3pbK0Mg==",
   "success": true,
-  "projectFilePath": "D:\\Polito\\Done_IOT\\Project\\Website\\Nasrin\\climate_watch_website\\Dashboard.csproj",
+  "projectFilePath": "C:\\Users\\mrmhn\\OneDrive\\Desktop\\Dashboard\\dashboard\\Dashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrmhn\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\mrmhn\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

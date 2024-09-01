@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Polito\\Done_IOT\\Project\\Website\\Nasrin\\climate_watch_website\\Dashboard.csproj": {}
+    "C:\\Users\\mrmhn\\OneDrive\\Desktop\\Dashboard\\dashboard\\Dashboard.csproj": {}
   },
   "projects": {
-    "D:\\Polito\\Done_IOT\\Project\\Website\\Nasrin\\climate_watch_website\\Dashboard.csproj": {
+    "C:\\Users\\mrmhn\\OneDrive\\Desktop\\Dashboard\\dashboard\\Dashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Polito\\Done_IOT\\Project\\Website\\Nasrin\\climate_watch_website\\Dashboard.csproj",
+        "projectUniqueName": "C:\\Users\\mrmhn\\OneDrive\\Desktop\\Dashboard\\dashboard\\Dashboard.csproj",
         "projectName": "Dashboard",
-        "projectPath": "D:\\Polito\\Done_IOT\\Project\\Website\\Nasrin\\climate_watch_website\\Dashboard.csproj",
+        "projectPath": "C:\\Users\\mrmhn\\OneDrive\\Desktop\\Dashboard\\dashboard\\Dashboard.csproj",
         "packagesPath": "C:\\Users\\mrmhn\\.nuget\\packages\\",
-        "outputPath": "D:\\Polito\\Done_IOT\\Project\\Website\\Nasrin\\climate_watch_website\\obj\\",
+        "outputPath": "C:\\Users\\mrmhn\\OneDrive\\Desktop\\Dashboard\\dashboard\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrmhn\\AppData\\Roaming\\NuGet\\NuGet.Config",
