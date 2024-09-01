@@ -1,0 +1,104 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Climate_Watch.Models.Configurations.MonitoringModel
+@{
+    ViewData["Title"] = "Monitoring Settings";
+}
+
+<h2>Monitoring Settings</h2>
+
+
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="FetchDataInterval" class="control-label"></label>
+            <input asp-for="FetchDataInterval" class="form-control" oninput="enableSaveButton()"/>
+            <span asp-validation-for="FetchDataInterval" class="text-danger"></span>
+        </div>
+
+
+        <div class="col-md-6 form-group">
+            <label asp-for="TemperatureThreshold" class="control-label"></label>
+            <input asp-for="TemperatureThreshold" class="form-control" oninput="enableSaveButton()"/>
+            <span asp-validation-for="TemperatureThreshold" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="HumidityThreshold" class="control-label"></label>
+            <input asp-for="HumidityThreshold" class="form-control" oninput="enableSaveButton()"/>
+            <span asp-validation-for="HumidityThreshold" class="text-danger"></span>
+        </div>
+        <div class=" col-md-6 form-group">
+            <label asp-for="SmokeThreshold" class="control-label"></label>
+            <input asp-for="SmokeThreshold" class="form-control" oninput="enableSaveButton()"/>
+            <span asp-validation-for="SmokeThreshold" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class=" col-md-6 form-group">
+            <label asp-for="DeleteDataInterval" class="control-label"></label>
+            <input asp-for="DeleteDataInterval" class="form-control" oninput="enableSaveButton()"/>
+            <span asp-validation-for="DeleteDataInterval" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <input asp-for="Status" class="form-control" readonly/>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="Ip" class="control-label"></label>
+            <input asp-for="Ip" class="form-control" readonly/>
+            <span asp-validation-for="Ip" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="Port" class="control-label"></label>
+            <input asp-for="Port" class="form-control" readonly/>
+            <span asp-validation-for="Port" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="GetConfigTopic" class="control-label"></label>
+            <input asp-for="GetConfigTopic" class="form-control" readonly/>
+            <span asp-validation-for="GetConfigTopic" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="WarningTopic" class="control-label"></label>
+            <input asp-for="WarningTopic" class="form-control" readonly/>
+            <span asp-validation-for="WarningTopic" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="HistoricalDataIP" class="control-label"></label>
+            <input asp-for="HistoricalDataIP" class="form-control" readonly/>
+            <span asp-validation-for="HistoricalDataIP" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="LastUpdate" class="control-label"></label>
+            <input asp-for="LastUpdate" class="form-control" readonly/>
+            <span asp-validation-for="LastUpdate" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <button type="submit" id="saveButton" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+
+@section Scripts {
+    <script>
+        function enableSaveButton() {
+            document.getElementById('saveButton').disabled = false;
+        }
+    </script>
+}

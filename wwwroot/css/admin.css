@@ -1,0 +1,110 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 48px;
+    padding-right: 25px;
+    padding-left: 25px;
+    background-color: #343a40;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: top;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: calc(100vh - 48px);
+    width: 200px;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px 25px;
+}
+
+.nav-item {
+    color: #212529;
+    text-decoration: none;
+}
+
+main {
+    width: calc(100vw - 200px);
+    padding: 50px;
+}
+table{
+    width:100%
+}
+td,th{
+    border : 1px solid #999;
+    padding : 0.5rem;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1ede15;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }

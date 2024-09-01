@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Climate_Watch.Models.DefinedHome>
+@{
+    ViewData["Title"] = "Places";
+}
+
+<h2>Places</h2>
+<h1></h1>
+<a asp-action="CreatePlaceView" class="btn btn-primary">Create New Place</a>
+<table class="table" style="margin-top: 10px">
+    <thead>
+    <tr>
+        <th>Place Name</th>
+        <th>Admin Username</th>
+        <th>Raspberry Pi Address</th>
+        <th>Send Data Interval</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var place in Model)
+    {
+        <tr>
+            <td>@place.PlaceName</td>
+            <td>@place.PlaceAdminUsername</td>
+            <td>@place.RaspberryPiAddress</td>
+            <td>@place.SendDataInterval</td>
+            <td>
+                    <button class="btn btn-info" onclick="showSensors(@place.PlaceID)">Show Sensors</button>
+
+                <a asp-action="EditPlaceView" asp-route-id="@place.PlaceID" class="btn btn-primary">Edit</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+
+<div id="sensorModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sensors</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="sensorModalBody">
+                <!-- Sensors will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        function showSensors(placeId) {
+            $.get('/Home/GetSensors', { placeId: placeId }, function(data) {
+                $('#sensorModalBody').html(data);
+                $('#sensorModal').modal('show');
+            });
+        }
+
+        function saveSensors() {
+            var sensors = [];
+            $('#sensorModalBody').find('input[type="checkbox"]').each(function() {
+                sensors.push({
+                    SensorID: $(this).data('sensor-id'),
+                    State: $(this).prop('checked')
+                });
+            });
+
+            $.ajax({
+                url: '/Home/UpdateSensors',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(sensors),
+                success: function(response) {
+                    if (response.success) {
+                        $('#sensorModal').modal('hide');
+                    }
+                }
+            });
+        }
+    </script>
+}

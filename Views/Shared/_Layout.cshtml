@@ -1,0 +1,194 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+   // var isAuthenticated = HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
+    //var isAuthenticated = HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
+    
+    var isSuperAdmin = false;
+    if (HttpContextAccessor.HttpContext!=null)
+    {
+        isSuperAdmin = HttpContextAccessor.HttpContext.Session.GetString("IsSuperAdmin") == "True";
+    }
+    
+    
+}
+
+<!DOCTYPE html>
+<style>
+    .wallet {
+    position: absolute;
+    left: 50px;
+    margin-left: 30px;
+    color: white;
+    }
+    .wallet .dropdown-menu {
+        right: auto !important;
+    }
+    .accountInfoIcon{
+    color: white;
+    }
+    .AccountInfo{
+    position: absolute;
+    left: 0px;
+    margin-left: 1355px;
+    }
+    .AccountInfo .dropdown-menu {
+            right: auto !important;
+        }
+    .search1{
+    position: absolute; left: 98px;
+    }
+    .footer{
+    margin-top: 20px;
+    }
+    .orderList{
+    margin-left: 30px;
+    position: absolute;
+     left: 0px;
+     top: 10px;
+     }
+     .ordercount{
+       left: 29px;
+       position: absolute
+       }
+</style>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"]</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="/lib/bootstrap4/css/bootstrap-rtl.css"/>
+    <link href="https://cdn.rawgit.com/rastikerdar/sahel-font/v1.0.0-alpha23/dist/font-face.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
+</head>
+<body style="font-family : sahel,sans-serif;">
+<header class="sticky-top ">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm  navbar-dark bg-dark  border-bottom box-shadow mb-3 ">
+        <div class="container-fluid ">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Smart Garden</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <partial name="_AccountInfo"/>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        
+                        @if (isSuperAdmin)
+                        {                            
+                            <!-- Dropdown menu item -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Configurations
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="MonitoringSettingsView">Monitoring</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="DbConnectorSettingsView">DB Connector</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="InfluxDbSettingsView">Influx Db</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="HistoricalDataSettingsView">Historical Data</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="WebsiteSettingsView">Website</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="UACSettingsView">UAC</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="TelegramSettingsView">Telegram</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Configuration" asp-action="GeneralSettingsView">General</a>                                    
+                                </div>
+                            </li>
+                            
+                                
+                        }
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="account" asp-action="ShowUserInfo">Accounts</a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="HistoricalDataView">Historical Data</a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="DefinedEntityView">Entities</a>
+                        </li>
+                        
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="DefinedDeviceView">Devices</a>
+                        </li>
+                        
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="MeasuredTemperatureView">Measured Temperature</a>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Places
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="DefinedPlaceView">Places</a>
+                                
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="UserInPlaceView">User In Place</a>
+                            </div>
+                        </li>
+                        
+                    }
+                    else
+                    {
+                    }
+
+
+                    @*       <li class="search1"> *@
+                    @*           <div class="input-group mb-3"> *@
+                    @*               <div class="input-group-prepend"> *@
+                    @*                   <i class="input-group-text fa fa-search" id="basic-addon1"></i> *@
+                    @*               </div> *@
+                    @*               <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> *@
+                    @*           </div> *@
+                    @* *@
+                    @*       </li> *@
+
+
+
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+<footer class="border-top footer text-muted" style="">
+
+    <div class="container">
+        &copy; 2024 - Smart Garden - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Climate_Watch.Models.Configurations.GeneralDataModel
+@{
+    ViewData["Title"] = "General Settings";
+}
+
+<h2>General Settings</h2>
+
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="MessageBrokerPort" class="control-label"></label>
+            <input asp-for="MessageBrokerPort" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="MessageBrokerPort" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label asp-for="RegisterInterval" class="control-label"></label>
+            <input asp-for="RegisterInterval" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="RegisterInterval" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="MessageBrokerIP" class="control-label"></label>
+            <input asp-for="MessageBrokerIP" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="MessageBrokerIP" class="text-danger"></span>
+        </div>
+    </div>
+    <button type="submit" id="saveButton" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+
+@section Scripts {
+    <script>
+        function enableSaveButton() {
+            document.getElementById('saveButton').disabled = false;
+        }
+    </script>
+}

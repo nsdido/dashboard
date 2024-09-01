@@ -1,0 +1,37 @@
+﻿@model Climate_Watch.Models.AddUserToPlaceViewModel
+@{
+    ViewData["Title"] = "Add User To Place";
+}
+
+<h2>Add User To Place</h2>
+
+<div class="container mt-4">
+    <form asp-action="AddUserToPlaceView" method="post">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <select id="placesDropdown" asp-for="SelectedPlaceId" class="form-control"
+                        asp-items="@(new SelectList(Model.PlaceOptions, "PlaceID", "PlaceName"))">
+                    <option value="">-- Select a Place --</option>
+                </select>
+
+                <div class="form-group">
+                    <label asp-for="NewUserName"></label>
+                    <input asp-for="NewUserName" class="form-control"/>
+                    <span asp-validation-for="NewUserName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+
+        <h4>@ViewBag.Message</h4>
+
+    </form>
+</div>
+
+
+<div>
+    <a asp-action="UserInPlaceView">Back to List</a>
+</div>

@@ -1,0 +1,69 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Climate_Watch.Models.Configurations.InfluxDbModel
+@{
+    ViewData["Title"] = "Influx DB Settings";
+}
+
+<h2>Influx DB Settings</h2>
+    
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="InfluxIP" class="control-label"></label>
+            <input asp-for="InfluxIP" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="InfluxIP" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label asp-for="InfluxName" class="control-label"></label>
+            <input asp-for="InfluxName" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="InfluxName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="InfluxUsername" class="control-label"></label>
+            <input asp-for="InfluxUsername" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="InfluxUsername" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label asp-for="LastUpdate" class="control-label"></label>
+            <input asp-for="LastUpdate" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="LastUpdate" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="row">
+            <div class="col-md-6 form-group">
+                <label asp-for="InfluxPassword" class="control-label"></label>
+                <input asp-for="InfluxPassword" class="form-control" readonly oninput="enableSaveButton()"/>
+                @*<span asp-validation-for="InfluxPassword" class="text-danger"></span>*@
+            </div>
+            <div class="col-md-6 form-group">
+                <label asp-for="InfluxPort" class="control-label"></label>
+                <input asp-for="InfluxPort" class="form-control" readonly oninput="enableSaveButton()"/>
+                <span asp-validation-for="InfluxPort" class="text-danger"></span>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class=" col-md-6 form-group">
+            <label asp-for="LastUpdate" class="control-label"></label>
+            <input asp-for="LastUpdate" class="form-control" readonly/>
+            <span asp-validation-for="LastUpdate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <button type="submit" id="saveButton" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+
+@section Scripts {
+    <script>
+        function enableSaveButton() {
+            document.getElementById('saveButton').disabled = false;
+        }
+    </script>
+}

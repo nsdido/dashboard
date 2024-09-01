@@ -1,0 +1,13 @@
+﻿@model Climate_Watch.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register Successful</h1>
+<hr />
+<div class=" alert alert-success">
+    ' User ' + @Model.TelegramId + ' had been created, you can login with the bellow link'
+    <p>
+        <a asp-action="Login" asp-controller="Account">Login</a>
+    </p>
+</div>

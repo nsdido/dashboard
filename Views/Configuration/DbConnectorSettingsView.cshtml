@@ -1,0 +1,58 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Climate_Watch.Models.Configurations.DbConnectorModel
+@{
+    ViewData["Title"] = "DbConnector Settings";
+}
+
+<h2>DbConnector Settings</h2>
+
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="Ip" class="control-label"></label>
+            <input asp-for="Ip" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="Ip" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label asp-for="Port" class="control-label"></label>
+            <input asp-for="Port" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="Port" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-md-6 form-group">
+            <label asp-for="GetSensorDataTopic" class="control-label"></label>
+            <input asp-for="GetSensorDataTopic" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="GetSensorDataTopic" class="text-danger"></span>
+        </div>
+
+        <div class=" col-md-6 form-group">
+            <label asp-for="LastUpdate" class="control-label"></label>
+            <input asp-for="LastUpdate" class="form-control" readonly/>
+            <span asp-validation-for="LastUpdate" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <input asp-for="Status" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <button type="submit" id="saveButton" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+
+@section Scripts {
+    <script>
+        function enableSaveButton() {
+            document.getElementById('saveButton').disabled = false;
+        }
+    </script>
+}

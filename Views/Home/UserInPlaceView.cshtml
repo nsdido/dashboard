@@ -1,0 +1,59 @@
+﻿@model Climate_Watch.Models.UserInPlaceViewModel
+@{
+    ViewData["Title"] = "User In Place";
+}
+
+<h2>User In Place</h2>
+<a asp-action="AddUserToPlaceView" class="btn btn-primary">Add User To Place</a>
+
+
+<div class="container mt-4">
+    <form asp-action="UserInPlaceView" method="post">
+        <div class="row">
+            
+            <div class="col-md-4 mb-3">
+                <select id="placesDropdown" asp-for="SelectedPlaceId" class="form-control"
+                        asp-items="@(new SelectList(Model.PlaceOptions, "PlaceID", "PlaceName"))">
+                    <option value="">-- Select a Place --</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+        
+        <h4>@ViewBag.Message</h4>
+
+    </form>
+</div>
+
+
+@if (Model.Users != null && Model.Users.Count != 0)
+{
+    <table class="table table-striped">
+        <thead class=" thead-dark">
+        <tr>
+            <th>User Name</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Users)
+        {
+            <tr>
+                <td>@item
+                @*<td>
+                        <a asp-action="DeleteData" asp-controller="home" asp-route-OrderDetailId="@item.DetailId">حذف</a>
+                    </td>*@
+            </tr>
+        }
+        </tbody>
+
+
+    </table>
+}
+else
+{
+    <div class=" alert-danger">There are not user in this place</div>
+}

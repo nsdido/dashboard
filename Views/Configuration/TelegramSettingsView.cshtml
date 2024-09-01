@@ -1,0 +1,69 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Climate_Watch.Models.Configurations.TelegramDataModel
+@{
+    ViewData["Title"] = "Telegram Settings";
+}
+
+<h2>Telegram Settings</h2>
+    
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="HistoricalDataIP" class="control-label"></label>
+            <input asp-for="HistoricalDataIP" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="HistoricalDataIP" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label asp-for="UacIP" class="control-label"></label>
+            <input asp-for="UacIP" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="UacIP" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-6 form-group">
+                <label asp-for="Ip" class="control-label"></label>
+                <input asp-for="Ip" class="form-control" readonly oninput="enableSaveButton()"/>
+                <span asp-validation-for="Ip" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 form-group">
+                <label asp-for="Token" class="control-label"></label>
+                <input asp-for="Token" class="form-control" readonly oninput="enableSaveButton()"/>
+                <span asp-validation-for="Token" class="text-danger"></span>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <input asp-for="Status" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+        <div class=" col-md-6 form-group">
+            <label asp-for="WarningTopic" class="control-label"></label>
+            <input asp-for="WarningTopic" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="WarningTopic" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label asp-for="LastUpdate" class="control-label"></label>
+            <input asp-for="LastUpdate" class="form-control" readonly oninput="enableSaveButton()"/>
+            <span asp-validation-for="LastUpdate" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <button type="submit" id="saveButton" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+
+@section Scripts {
+    <script>
+        function enableSaveButton() {
+            document.getElementById('saveButton').disabled = false;
+        }
+    </script>
+}

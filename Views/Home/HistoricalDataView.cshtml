@@ -1,0 +1,66 @@
+﻿@model Climate_Watch.Models.SensorComboBoxViewModel
+@{
+    ViewData["Title"] = "HistoricalDataView";
+}
+
+<h2>Historical Data</h2>
+
+<div class="container mt-4">
+    <form asp-action="HistoricalDataView" method="post">
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+                <select asp-for="SelectedSensorId" asp-items="Model.SensorOptions" class="form-control">
+                    <option value="">-- Select a Sensor --</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <select id="placesDropdown" asp-for="SelectedPlaceId" class="form-control"
+                        asp-items="@(new SelectList(Model.PlaceOptions, "PlaceID", "PlaceName"))">
+                    <option value="">-- Select a Place --</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+        
+        <h4>@ViewBag.Message</h4>
+
+    </form>
+</div>
+
+
+@if (Model.Data != null && Model.Data.Count != 0)
+{
+    <table class="table table-striped">
+        <thead class=" thead-dark">
+        <tr>
+            <th>Sensor</th>
+            <th>Time</th>
+            <th>Value</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>@item.SensorName</td>
+                <td>@item.Time</td>
+                <td>@item.Value</td>
+                @*<td>
+                        <a asp-action="DeleteData" asp-controller="home" asp-route-OrderDetailId="@item.DetailId">حذف</a>
+                    </td>*@
+            </tr>
+        }
+        </tbody>
+
+
+    </table>
+}
+else
+{
+    <div class=" alert-danger">There are not measured data</div>
+}

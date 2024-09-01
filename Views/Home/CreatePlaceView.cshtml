@@ -1,0 +1,31 @@
+﻿@model Climate_Watch.Models.DefinedHome
+@{
+    ViewData["Title"] = "Create Place";
+}
+
+<h2>Create Place</h2>
+
+<form asp-action="CreatePlaceView">
+    <div class="form-group">
+        <label asp-for="PlaceName" class="control-label"></label>
+        <input asp-for="PlaceName" class="form-control" />
+        <span asp-validation-for="PlaceName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RaspberryPiAddress" class="control-label"></label>
+        <input asp-for="RaspberryPiAddress" class="form-control" />
+        <span asp-validation-for="RaspberryPiAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SendDataInterval" class="control-label"></label>
+        <input asp-for="SendDataInterval" class="form-control" />
+        <span asp-validation-for="SendDataInterval" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="DefinedPlaceView">Back to List</a>
+</div>

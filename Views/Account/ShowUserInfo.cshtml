@@ -1,0 +1,29 @@
+﻿@model Climate_Watch.Models.Users
+
+@{
+    ViewData["Title"] = "Account Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Account Information</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TelegramId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TelegramId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RegisterDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RegisterDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="EditUser">Edit Account</a>
+</div>
