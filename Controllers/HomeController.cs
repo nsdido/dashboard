@@ -211,7 +211,7 @@ namespace Climate_Watch.Controllers {
             var result = _entityRepository.GetEntities();
 
             return View(result);
-        }
+        } 
         
         public IActionResult DefinedDeviceView()
         {
