@@ -364,7 +364,7 @@ namespace Climate_Watch.Controllers {
                 PlaceName = _.PlaceName,
                 PlaceAdminUsername = _.PlaceAdminUsername,  
                 SendDataInterval = _.SendDataInterval,
-                RaspberryPiAddress = _.RaspberryPiAddress
+                RaspberryPiAddress = _.RaspberryPiAddress  
             }).ToList();
 
             if (!ModelState.IsValid)
