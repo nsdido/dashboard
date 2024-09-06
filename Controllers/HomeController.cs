@@ -26,8 +26,10 @@ namespace Climate_Watch.Controllers {
             IHistoricalDataRepository historicalDataRepository,
             IPlaceRepository placeRepository,
             IConfigurationRepository configurationRepository,
-            IEntityRepository entityRepository, IDeviceRepository deviceRepository, ITemperatureRepository temperatureRepository ,IServiceRepository ServiceRepository)
-            
+            IEntityRepository entityRepository,
+            IDeviceRepository deviceRepository,
+            ITemperatureRepository temperatureRepository,
+            IServiceRepository serviceRepository)
         {
             _logger = logger;
             _context = context;
@@ -37,7 +39,7 @@ namespace Climate_Watch.Controllers {
             _entityRepository = entityRepository;
             _deviceRepository = deviceRepository;
             _temperatureRepository = temperatureRepository;
-            _serviceRepository = ServiceRepository;
+            _serviceRepository = serviceRepository;
         }
 
         public IActionResult Index()
