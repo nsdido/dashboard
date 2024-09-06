@@ -57,6 +57,7 @@ public class Program {
         builder.Services.AddScoped<IEntityRepository, EntityRepository>();
         builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
         builder.Services.AddScoped<ITemperatureRepository, TemperatureRepository>();
+        builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
         
         
         

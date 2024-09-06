@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 
 namespace Climate_Watch.Models;
 
@@ -56,8 +57,6 @@ public class DefinedEntity {
 }
 
 
-
-
 public class DeviceModel
 {
     public int Id { get; set; }
@@ -75,7 +74,22 @@ public class DefinedDevice
     public List<DeviceModel> List { get; set; }
 }
 
-
+public class ServiceModel
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Running_Status { get; set; }
+    public int port { get; set; }
+    public string desc { get; set; }
+}
+public class DefinedService
+{
+    public int page { get; set; }
+    public string page_total{ get; set; }
+    public string size{ get; set; }
+    public string total{ get; set; }
+    public List<ServiceModel> List { get; set; }
+}
 
 public class TemperatureModel
 {

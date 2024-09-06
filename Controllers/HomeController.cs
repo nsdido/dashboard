@@ -17,7 +17,8 @@ namespace Climate_Watch.Controllers {
         private IDeviceRepository _deviceRepository;
         private ITemperatureRepository _temperatureRepository;
         private IConfigurationRepository _configurationRepository;
-
+        private IServiceRepository _serviceRepository;
+        
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger,
@@ -25,7 +26,8 @@ namespace Climate_Watch.Controllers {
             IHistoricalDataRepository historicalDataRepository,
             IPlaceRepository placeRepository,
             IConfigurationRepository configurationRepository,
-            IEntityRepository entityRepository, IDeviceRepository deviceRepository, ITemperatureRepository temperatureRepository)
+            IEntityRepository entityRepository, IDeviceRepository deviceRepository, ITemperatureRepository temperatureRepository ,IServiceRepository ServiceRepository)
+            
         {
             _logger = logger;
             _context = context;
@@ -35,6 +37,7 @@ namespace Climate_Watch.Controllers {
             _entityRepository = entityRepository;
             _deviceRepository = deviceRepository;
             _temperatureRepository = temperatureRepository;
+            _serviceRepository = ServiceRepository;
         }
 
         public IActionResult Index()
@@ -213,13 +216,21 @@ namespace Climate_Watch.Controllers {
             return View(result);
         } 
         
-        public IActionResult DefinedDeviceView()
+        public IActionResult DefinedService()
         {
             var result = _deviceRepository.GetAll();
 
             return View(result);
         }
         
+        public IActionResult DefinedServiceView()
+        {
+            //var result = IServiceRepository.GetAll();
+
+            var result = _serviceRepository.GetAll();
+
+            return View(result);
+        }
         
         public IActionResult MeasuredTemperatureView()
         {
