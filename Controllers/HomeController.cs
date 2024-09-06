@@ -362,7 +362,7 @@ namespace Climate_Watch.Controllers {
             {
                 PlaceID = _.PlaceID,
                 PlaceName = _.PlaceName,
-                PlaceAdminUsername = _.PlaceAdminUsername,
+                PlaceAdminUsername = _.PlaceAdminUsername,  
                 SendDataInterval = _.SendDataInterval,
                 RaspberryPiAddress = _.RaspberryPiAddress
             }).ToList();
