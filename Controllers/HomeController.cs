@@ -18,6 +18,7 @@ namespace Climate_Watch.Controllers {
         private ITemperatureRepository _temperatureRepository;
         private IConfigurationRepository _configurationRepository;
         private IServiceRepository _serviceRepository;
+        private IHumidityRepository _humidityRepository;
         
         private readonly ILogger<HomeController> _logger;
 
@@ -29,7 +30,8 @@ namespace Climate_Watch.Controllers {
             IEntityRepository entityRepository,
             IDeviceRepository deviceRepository,
             ITemperatureRepository temperatureRepository,
-            IServiceRepository serviceRepository)
+            IServiceRepository serviceRepository,
+            IHumidityRepository humidityRepository)
         {
             _logger = logger;
             _context = context;
@@ -40,6 +42,7 @@ namespace Climate_Watch.Controllers {
             _deviceRepository = deviceRepository;
             _temperatureRepository = temperatureRepository;
             _serviceRepository = serviceRepository;
+            _humidityRepository = humidityRepository;
         }
 
         public IActionResult Index()
@@ -241,6 +244,12 @@ namespace Climate_Watch.Controllers {
             return View(result);
         }
 
+        public IActionResult MeasuredHumidityView()
+        {
+            var result = _humidityRepository.GetAll(DateTime.Now);
+
+            return View(result);
+        }
         //====================================================== api must be deleted
         public IActionResult DefinedPlaceView()
         {

@@ -108,7 +108,22 @@ public class MeasuredTemperature
     public List<TemperatureModel> List { get; set; }
 }
 
+public class HumidityModel
+{
+    public string Measurement { get; set; }
+    public double Value { get; set; }
+    public string Created_at { get; set; }
+    public string Start_at { get; set; }
+    public string End_at { get; set; }
+    public string Device { get; set; }
+}
 
+public class MeasuredHumidity
+{
+    public int Code { get; set; }
+    public string Message { get; set; }
+    public List<HumidityModel> List { get; set; }
+}
 
 
 public class RuleModel
@@ -133,9 +148,6 @@ public class DefinedRule
     public string Message { get; set; }
     public List<RuleModel> List { get; set; }
 }
-
-
-
 
 
 public class SensorModel {
