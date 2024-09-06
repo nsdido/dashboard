@@ -125,6 +125,24 @@ public class MeasuredHumidity
     public List<HumidityModel> List { get; set; }
 }
 
+public class LightModel
+{
+    public string Measurement { get; set; }
+    public double Value { get; set; }
+    public string Created_at { get; set; }
+    public string Start_at { get; set; }
+    public string End_at { get; set; }
+    public string Device { get; set; }
+}
+
+public class MeasuredLightView
+{
+    public int code { get; set; }
+    
+    public string message { get; set; }
+    public List<LightModel> list { get; set; }
+}
+
 
 public class RuleModel
 {

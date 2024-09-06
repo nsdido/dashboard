@@ -59,6 +59,7 @@ public class Program {
         builder.Services.AddScoped<ITemperatureRepository, TemperatureRepository>();
         builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
         builder.Services.AddScoped<IHumidityRepository, HumidityRepository>();
+        builder.Services.AddScoped<ILightRepository,LightRepository>();
         
         
         

@@ -19,6 +19,7 @@ namespace Climate_Watch.Controllers {
         private IConfigurationRepository _configurationRepository;
         private IServiceRepository _serviceRepository;
         private IHumidityRepository _humidityRepository;
+        private ILightRepository _lightRepository;
         
         private readonly ILogger<HomeController> _logger;
 
@@ -31,7 +32,8 @@ namespace Climate_Watch.Controllers {
             IDeviceRepository deviceRepository,
             ITemperatureRepository temperatureRepository,
             IServiceRepository serviceRepository,
-            IHumidityRepository humidityRepository)
+            IHumidityRepository humidityRepository,
+            ILightRepository lightRepository)
         {
             _logger = logger;
             _context = context;
@@ -43,6 +45,7 @@ namespace Climate_Watch.Controllers {
             _temperatureRepository = temperatureRepository;
             _serviceRepository = serviceRepository;
             _humidityRepository = humidityRepository;
+            _lightRepository = lightRepository;
         }
 
         public IActionResult Index()
@@ -223,7 +226,7 @@ namespace Climate_Watch.Controllers {
         
         public IActionResult DefinedService()
         {
-            var result = _deviceRepository.GetAll();
+            var result = _serviceRepository.GetAll();
 
             return View(result);
         }
@@ -237,6 +240,21 @@ namespace Climate_Watch.Controllers {
             return View(result);
         }
         
+        public IActionResult DefinedDevice()
+        {
+            var result = _deviceRepository.GetAll();
+
+            return View(result);
+        }
+        
+        public IActionResult DefinedDeviceView()
+        {
+            //var result = IServiceRepository.GetAll();
+
+            var result = _deviceRepository.GetAll();
+
+            return View(result);
+        }
         public IActionResult MeasuredTemperatureView()
         {
             var result = _temperatureRepository.GetAll(DateTime.Now);
@@ -250,6 +268,23 @@ namespace Climate_Watch.Controllers {
 
             return View(result);
         }
+        
+        
+        public IActionResult DefinedLight()
+        {
+            var result = _lightRepository.GetAll(DateTime.Now);
+
+            return View(result);
+        }
+
+        public IActionResult MeasuredLightView()
+        {
+            var result = _lightRepository.GetAll(DateTime.Now);
+
+            return View(result);
+        }
+        
+        
         //====================================================== api must be deleted
         public IActionResult DefinedPlaceView()
         {
