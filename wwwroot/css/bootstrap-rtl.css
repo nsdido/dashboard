@@ -514,7 +514,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
   color: #fff;
-  background-color: #212529;
+  background-color: #218838;
   border-radius: 0.2rem;
 }
 
@@ -527,7 +527,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #212529;
+  color: #218838;
 }
 
 pre code {
@@ -1856,7 +1856,7 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #28a745;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -1881,7 +1881,7 @@ pre code {
 }
 
 .form-control:focus {
-  color: #495057;
+  color: #28a745;
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
@@ -4433,8 +4433,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(131, 178, 99);
+  border-color: rgba(131, 178, 99);
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -6424,13 +6424,13 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #28a745 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #1d2124 !important;
+  background-color: #28a745 !important;
 }
 
 .bg-white {
@@ -11389,4 +11389,5 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: right !important;
   }
 }
+
 /*# sourceMappingURL=bootstrap-rtl.css.map */

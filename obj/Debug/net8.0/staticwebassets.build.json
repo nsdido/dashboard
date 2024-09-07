@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZtpuKbqjT2NFklbrfv6/Ix/aljVayADWeovzT0NIoyA=",
+  "Hash": "oc23or3wA3W+fJfbLVf67JEDrOnQ1ERmxFnW147zxzg=",
   "Source": "Dashboard",
   "BasePath": "_content/Dashboard",
   "Mode": "Default",
@@ -1290,12 +1290,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\garden1.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (1).jpg",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "Images/garden1.jpg",
+      "RelativePath": "Images/image (1).jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,15 +1306,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\garden1.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\image (1).jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\garden2.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (2).jpg",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "Images/garden2.jpg",
+      "RelativePath": "Images/image (2).jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1325,15 +1325,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\garden2.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\image (2).jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\garden3.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (3).jpg",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "Images/garden3.jpg",
+      "RelativePath": "Images/image (3).jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1344,15 +1344,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\garden3.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\image (3).jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\home1.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (4).jpg",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "Images/home1.jpg",
+      "RelativePath": "Images/image (4).jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1363,45 +1363,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\home1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\home2.jpg",
-      "SourceId": "Dashboard",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\",
-      "BasePath": "_content/Dashboard",
-      "RelativePath": "Images/home2.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\home2.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\home3.jpg",
-      "SourceId": "Dashboard",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\",
-      "BasePath": "_content/Dashboard",
-      "RelativePath": "Images/home3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\home3.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\image (4).jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\js\\site.js",

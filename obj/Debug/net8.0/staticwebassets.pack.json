@@ -1,28 +1,20 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\garden1.jpg",
-      "PackagePath": "staticwebassets\\Images\\garden1.jpg"
+      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (1).jpg",
+      "PackagePath": "staticwebassets\\Images\\image (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\garden2.jpg",
-      "PackagePath": "staticwebassets\\Images\\garden2.jpg"
+      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (2).jpg",
+      "PackagePath": "staticwebassets\\Images\\image (2).jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\garden3.jpg",
-      "PackagePath": "staticwebassets\\Images\\garden3.jpg"
+      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (3).jpg",
+      "PackagePath": "staticwebassets\\Images\\image (3).jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\home1.jpg",
-      "PackagePath": "staticwebassets\\Images\\home1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\home2.jpg",
-      "PackagePath": "staticwebassets\\Images\\home2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\home3.jpg",
-      "PackagePath": "staticwebassets\\Images\\home3.jpg"
+      "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\Images\\image (4).jpg",
+      "PackagePath": "staticwebassets\\Images\\image (4).jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\Dashboard\\dashboard\\wwwroot\\css\\admin.css",
